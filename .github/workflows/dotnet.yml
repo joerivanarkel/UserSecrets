@@ -27,5 +27,5 @@ jobs:
     steps:
       - name: Build solution and generate NuGet package
         run: |
-          cd UserSecrets
-          dotnet nuget push /bin/Release/*.nupkg --api-key ${{secrets.TOKEN}} --source "https://api.nuget.org/v3/index.json" --skip-duplicate --no-symbols true
+          cd ./UserSecrets/
+          dotnet nuget push ./bin/Release/*.nupkg --api-key ${{secrets.TOKEN}} --source "https://api.nuget.org/v3/index.json" --skip-duplicate --no-symbols true
