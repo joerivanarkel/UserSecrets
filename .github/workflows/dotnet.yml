@@ -26,4 +26,6 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Build solution and generate NuGet package
-        run: dotnet nuget push ./bin/Release/*.nupkg --api-key ${{secrets.TOKEN}} --source "https://api.nuget.org/v3/index.json" --skip-duplicate --no-symbols true
+        run: |
+          cd UserSecrets
+          dotnet nuget push /bin/Release/*.nupkg --api-key ${{secrets.TOKEN}} --source "https://api.nuget.org/v3/index.json" --skip-duplicate --no-symbols true
