@@ -7,7 +7,7 @@ namespace UserSecrets
     {
         public static string GetSecret(string secretName)
         {
-            var secretConfig = new ConfiguratiocnBuilder()
+            var secretConfig = new ConfigurationBuilder()
                 .AddUserSecrets<T>()
                 .Build();
             return secretConfig[secretName];
