@@ -2,7 +2,7 @@
 
 namespace UserSecrets
 {
-    public class DatabaseConnection<T>
+    public class UserSecrets<T>
         where T : class
     {
         public static string GetSecret(string secretName)
