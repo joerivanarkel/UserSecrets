@@ -31,7 +31,7 @@ jobs:
         with:
           source-url: https://nuget.pkg.github.com/joerivanarkel/index.json
         env:
-          NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}        
+          NUGET_AUTH_TOKEN: ${{secrets.TOKEN}}        
           
       - name: Build solution and generate NuGet package
         run: |  
