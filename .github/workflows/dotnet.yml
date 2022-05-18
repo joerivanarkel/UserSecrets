@@ -39,7 +39,7 @@ jobs:
           dotnet pack -c Release -o out  
       
       - name: Register NuGet source
-        run: dotnet nuget add source --username joerivanarkel--password ${{secrets.TOKEN}} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/joerivanarkel/index.json"
+        run: dotnet nuget add source "https://nuget.pkg.github.com/joerivanarkel/index.json" --username joerivanarkel --password ${{secrets.TOKEN}} --store-password-in-clear-text --name github
 
       - name: Push generated package to GitHub registry
         run: dotnet nuget push ./UserSecrets/out/*.nupkg --api-key ${{secrets.TOKEN}} --source "github" --skip-duplicate --no-symbols true
