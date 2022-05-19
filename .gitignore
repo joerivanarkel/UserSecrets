@@ -19,8 +19,9 @@ mono_crash.*
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
-[Rr]elease/net6.0/
+[Rr]elease/
 [Rr]eleases/
+[Bb]in/
 net6.0/
 x64/
 x86/
